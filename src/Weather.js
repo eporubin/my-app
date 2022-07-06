@@ -51,7 +51,7 @@ export default function Weather() {
                    <div className="col-sm-6">
                         <div className="details">
                             <h4> Sunday, 16:00</h4>
-                            <h4> {weatherData.data.weather[0].description} </h4>
+                            <h4 className="text-capitalize"> {weatherData.data.weather[0].description} </h4>
                             <h4>Humidity: {weatherData.data.main.humidity}%</h4>
                             <h4>Wind: {weatherData.data.wind.speed} km/h</h4>    
                         </div>
