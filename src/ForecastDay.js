@@ -3,6 +3,7 @@ import WeatherIcon from 'react-icons-weather';
 
 export default function ForecastDay(props){
     return(
+        <div className="col-sm-2">
         <div className="ForecastDay">
             <div className="row">
                 <div className="col-12">
@@ -24,6 +25,7 @@ export default function ForecastDay(props){
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 )
     

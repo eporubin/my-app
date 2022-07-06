@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Weather.css";
 import axios from "axios";
 import Forecast from "./Forecast";
@@ -21,11 +21,16 @@ export default function Weather() {
       const response = await axios.get(apiUrl);
       setWeatherData(response);
   }
- window.onload = async function initializeMyAwesomeApp() {
+ async function initializeMyAwesomeApp() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=2120c535876391f18db8ca2cc1fdc54e&units=metric`;
       const response = await axios.get(apiUrl);
       setWeatherData(response);
   };
+
+  useEffect(() => {
+    initializeMyAwesomeApp()
+  }, [])
+
   function recordSearchTerm(event) {
     setSearchTerm(event.target.value);
   }
