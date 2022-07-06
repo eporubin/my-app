@@ -32,7 +32,7 @@ export default function Weather() {
   return (
     <div className="Weather">
       <form className="mb-3">
-        <div className="row">
+        <div className="row g-0">
             <div className="col-sm-12">
                 <div className="input-group">
                     <input type="text" className="form-control" placeholder="Search for a city" aria-label="Enter a city name" onChange={recordSearchTerm}/>
@@ -44,19 +44,13 @@ export default function Weather() {
       </form>
       <div>      
           {weatherData &&( 
-               <div className="container">
+               <div className="container-fluid">
                 <h1>{weatherData.data.name} </h1>
+                <h4> Sunday, 16:00</h4>
+               
 
-               <div className="row align-items-start">
-                   <div className="col-sm-6">
-                        <div className="details">
-                            <h4> Sunday, 16:00</h4>
-                            <h4 className="text-capitalize"> {weatherData.data.weather[0].description} </h4>
-                            <h4>Humidity: {weatherData.data.main.humidity}%</h4>
-                            <h4>Wind: {weatherData.data.wind.speed} km/h</h4>    
-                        </div>
-                   </div>
-                   <div className="col-sm-6">
+               <div className="row">
+               <div className="col-sm-6">
                         <div className="clearfix weather-temperature">
                             <img
                                 src={`http://openweathermap.org/img/wn/${weatherData.data.weather[0].icon}@2x.png`}
@@ -64,11 +58,18 @@ export default function Weather() {
                                 className="float-left"
                             />
                             <div className="float-left">
-                                <b>{Math.round(weatherData.data.main.temp)}</b>
+                            <b>{Math.round(weatherData.data.main.temp)}</b>
                                 <span className="units">
                                 <a href="/">°C</a> | <a href="/">°F</a>
                                 </span>
                             </div>
+                        </div>
+                   </div>
+                   <div className="col-sm-6 d-flex justify-content-center">
+                        <div className="details mt-4">
+                        <h4 className="text-capitalize"> {weatherData.data.weather[0].description} </h4>
+                            <h4>Humidity: {weatherData.data.main.humidity}%</h4>
+                            <h4>Wind: {weatherData.data.wind.speed} km/h</h4>    
                         </div>
                    </div>
                </div>
