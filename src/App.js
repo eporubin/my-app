@@ -1,15 +1,15 @@
-import logo from './logo.svg';
+import Weather from './Weather';
 import './App.css';
-import axios from 'axios';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello from React
-        </p>
-      </header>
+    <div className="App container">
+      <div className='WeatherApp content-section'>
+        <Weather />
+      </div>
+      <p>
+        <a href='https://github.com/eporubin/my-app' target="_blank" rel="noopener noreferrer">Open-source code </a> by Elena Porubin
+      </p>
     </div>
   );
 }
