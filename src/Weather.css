@@ -20,29 +20,5 @@
     margin: 0;
   }
 
-  .Weather .weather-temperature{
-    margin: 20px 0 0 0;
-  }
-  .Weather .weather-temperature img {
-    display:inline-block;
-    height: 100px;
-    margin-top: 0px;
-    vertical-align: top;
-    width: 100px;
-  }
-  .Weather .weather-temperature b {
-    color: #19191d;
-    display: inline;
-    font-size: 50px;
-    font-weight: 400;
-    height:auto;
-    letter-spacing:normal;
-    line-height:100px;
-    width:auto;
-  }
-  .Weather .weather-temperature .units {
-    position: relative;
-    font-size: 20px;
-    top: -28px;
-  }
+
   

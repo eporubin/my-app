@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./Weather.css";
+import WeatherTemperature from "./WeatherTemperature";
 import axios from "axios";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
@@ -65,10 +66,8 @@ export default function Weather() {
                                 className="float-left"
                             />
                             <div className="float-left">
-                            <b>{Math.round(weatherData.data.main.temp)}</b>
-                                <span className="units">
-                                <a href="/">°C</a> | <a href="/">°F</a>
-                                </span>
+                            <WeatherTemperature celcius = {weatherData.data.main.temp} />
+                           
                             </div>
                         </div>
                    </div>
@@ -82,7 +81,7 @@ export default function Weather() {
                </div>
            </div>          
           )}
-          {!weatherData && <p>Please enter a city</p>}
+          {!weatherData && <p>Loading...</p>}
         </div>
         <Forecast />
     </div>
