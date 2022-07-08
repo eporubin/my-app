@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./Weather.css";
 import axios from "axios";
 import Forecast from "./Forecast";
+import FormattedDate from "./FormattedDate";
 export default function Weather() {
     
   const [searchTerm, setSearchTerm] = useState("");
@@ -51,7 +52,8 @@ export default function Weather() {
           {weatherData &&( 
                <div className="container-fluid">
                 <h1>{weatherData.data.name} </h1>
-                <h4> Sunday, 16:00</h4>
+                
+                <FormattedDate />
                
 
                <div className="row">
