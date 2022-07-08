@@ -1,1 +1,7 @@
-
+.App {
+    max-width: 600px;
+    margin: 50px auto;
+}
+.formatted-date {
+    font-size: 25px;
+   }

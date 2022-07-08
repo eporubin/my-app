@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-
+import "./FormattedDate.css";
 export default function FormattedDate(){
 
     let [timeState, setTimeState] = useState(formatCurrentTime())
@@ -15,7 +15,7 @@ export default function FormattedDate(){
       }, []);
 
       return (
-          <div>
+          <div className="FormattedDate">
               {timeState}
           </div>
       )

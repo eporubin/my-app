@@ -1,21 +1,16 @@
-.App {
-  font-family: sans-serif;
-  max-width: 600px;
-  margin: 50px auto;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  color: #878787;
-  font-weight: 100;
+body{
+	background: #66bfbf; 
+  font-family: 'Gentium Book Plus', serif;
   font-size: 16px;
-  line-height: 19px;
 }
+.source-link{
+  padding: 10px;
+}
+.source-link a{
+  text-decoration: none;
+  color: #fcfefe;
+}
+
 
 .float-left {
   float: left !important;
@@ -45,4 +40,7 @@ li {
   font-size: 20px;
   font-weight: 600;
   color: #232327;
+}
+.formatted-date {
+ font-size: 25px;
 }

@@ -1,20 +1,52 @@
 .Weather {
-    padding:20px;
-    border: 1px solid #dadde1;
-    border-radius: 5px;
-  }
-  .Weather .details {
+  font-family: 'Gentium Book Plus', serif;
+  padding: 16px;
+  border: 1px solid #eaf6f6;
+  border-radius: 5px;
+  background-color: rgba(256, 256, 256, 0.8 );
+}
+.Weather form .btn-search {
+  background-color: #66bfbf;
+  color: #eaf6f6;
+  border: none;
+  transition: all 100ms ease;
+}
+.Weather form .btn-search:hover {
+  background-color: #eaf6f6;
+  color: #66bfbf;
+  border: 2px solid #66bfbf;
+}
+.Weather form .btn-current {
+  background-color: #f76b8a;
+  color: #eaf6f6;
+  border: none;
+  transition: all 100ms ease;
+}
+.Weather form .btn-current:hover {
+  background-color: #eaf6f6;
+  color: #f76b8a;
+  border: 2px solid #f76b8a;
+  border-radius: 0 5px 5px 0;
+}
+
+.Weather .details {
     margin-bottom: 20px;
     display: inline-block;
   }
-  .Weather h1 {
-    color: #19191d;
-    font-size: 24px;
+.Weather .details .description{
+    color: #f76b8a;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+.Weather h1 {
+    color: #f76b8a;
+    font-size: 40px;
     line-height: 28px;
     margin-bottom: 0;
   }
   .Weather h4 {
-    color: #898787;
+    color: #19191d;
     font-size: 20px;
     line-height: 24px;
     margin: 0;

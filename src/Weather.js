@@ -17,17 +17,26 @@ export default function Weather() {
       console.log(setWeatherData);
     }
   }
+
+
+
   async function handleCurrent(event) {
-    event.preventDefault();
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=paris&appid=2120c535876391f18db8ca2cc1fdc54e&units=metric`;
+    navigator.geolocation.getCurrentPosition(async function(position) {      
+      event.preventDefault();
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=2120c535876391f18db8ca2cc1fdc54e&units=metric`;
       const response = await axios.get(apiUrl);
       setWeatherData(response);
+    });
+
+
+      
   }
  async function initializeMyAwesomeApp() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=2120c535876391f18db8ca2cc1fdc54e&units=metric`;
       const response = await axios.get(apiUrl);
       setWeatherData(response);
   };
+ 
 
   useEffect(() => {
     initializeMyAwesomeApp()
@@ -38,13 +47,13 @@ export default function Weather() {
   }
   return (
     <div className="Weather">
-      <form className="mb-3">
+      <form className="mb-4 p-2" onSubmit = {handleSubmit}>
         <div className="row g-0">
             <div className="col-sm-12">
                 <div className="input-group">
                     <input type="text" className="form-control" placeholder="Search for a city" aria-label="Enter a city name" onChange={recordSearchTerm}/>
-                    <button className="btn btn-info" type="button" onClick={handleSubmit}>Search</button>
-                    <button className="btn btn-warning" type="button" onClick={handleCurrent}>Current</button>
+                    <button className="btn btn-search" type="button" onClick={handleSubmit} autoComplete="off">Search 🔎</button>
+                    <button className="btn btn-current" type="button" onClick={handleCurrent}>Current</button>
                 </div>
             </div>
         </div>
@@ -53,10 +62,7 @@ export default function Weather() {
           {weatherData &&( 
                <div className="container-fluid">
                 <h1>{weatherData.data.name} </h1>
-                
                 <FormattedDate />
-               
-
                <div className="row">
                <div className="col-sm-6">
                         <div className="clearfix weather-temperature">
@@ -67,13 +73,12 @@ export default function Weather() {
                             />
                             <div className="float-left">
                             <WeatherTemperature celcius = {weatherData.data.main.temp} />
-                           
                             </div>
                         </div>
                    </div>
                    <div className="col-sm-6 d-flex justify-content-center">
-                        <div className="details mt-4">
-                        <h4 className="text-capitalize"> {weatherData.data.weather[0].description} </h4>
+                        <div className="details mt-3">
+                        <h4 className="text-capitalize description"> {weatherData.data.weather[0].description} </h4>
                             <h4>Humidity: {weatherData.data.main.humidity}%</h4>
                             <h4>Wind: {weatherData.data.wind.speed} km/h</h4>    
                         </div>
