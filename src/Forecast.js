@@ -22,13 +22,21 @@ export default function Forecast(props){
     }
     useEffect(() => {
         initializeForecast()
-      }, [props]);
+      }, [props.coordinates]);
  
     return(
         <div className="Forecast">
             <div className="container">
                 <div className="row">
-                    {forecast && <ForecastDay data={forecast[0]} />}
+                    {forecast &&
+                        forecast.map(function (dailyForecast, index){
+                            if(index > 0 && index < 7){
+                                return(
+                                    <ForecastDay data={dailyForecast} />
+                                )
+                            }
+                        })
+                    }
                     {!forecast && <p>Forecast Loading...</p>}
                 </div>
             </div>
