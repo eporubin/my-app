@@ -1,4 +1,10 @@
 .FormattedDate {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
+    margin-top: 5px;
+}
+@media (max-width: 575.98px) {
+    .FormattedDate {
+        text-align: center;
+    }
 }

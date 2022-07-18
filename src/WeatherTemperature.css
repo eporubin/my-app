@@ -36,4 +36,13 @@
 .WeatherTemperature .active {
     color: #19191d!important;
 }
+
+@media (max-width: 575.98px){
+    .WeatherTemperature {
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+    }
+
+}
   

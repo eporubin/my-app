@@ -32,15 +32,13 @@ export default function Weather() {
       
   }
  async function initializeMyAwesomeApp() {
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=51.5085&lon=-0.1257&appid=2120c535876391f18db8ca2cc1fdc54e&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=51.5089&lon=-0.1257&appid=2120c535876391f18db8ca2cc1fdc54e&units=metric`;
       const response = await axios.get(apiUrl);
       setWeatherData(response);
-      console.log("Initial response is ", response)
   };
  
 
   useEffect(() => {
-    console.log("I'm executing this piece of")
     initializeMyAwesomeApp()
   }, [])
 

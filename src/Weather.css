@@ -12,11 +12,16 @@
   border-radius: 5px;
   background-color: rgba(256, 256, 256, 0.3 );
 }
+.Weather input {
+  border-radius: 5px 0 0 5px!important;
+}
 .Weather form .btn-search {
   background-color: var(--background-color);
   color: var(--light-color);
   border: none;
   transition: all 100ms ease;
+  display: inline-block;
+  border-radius: 0!important;
 }
 .Weather form .btn-search:hover {
   background-color: var(--light-color);
@@ -28,6 +33,7 @@
   color: var(--light-color);
   border: none;
   transition: all 100ms ease;
+  border-radius: 0 5px 5px 0;
 }
 .Weather form .btn-current:hover {
   background-color: var(--light-color);
@@ -42,7 +48,7 @@
   }
 .Weather .details .description{
     color: var(--accent-color);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
   }
 
@@ -58,6 +64,24 @@
     line-height: 24px;
     margin: 0;
   }
+
+  @media (max-width: 575.98px) { 
+  
+    .Weather form .btn-search {
+      width: 100%;
+      border-radius: 5px!important;
+      margin-top: 1rem;
+    }
+    .Weather form .btn-current{
+      width: 100%;
+      border-radius: 5px!important;
+      margin-top: 1rem;
+    }
+    h1 {
+      text-align: center!important;
+    }
+
+   }
 
 
   
