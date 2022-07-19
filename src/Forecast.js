@@ -11,14 +11,11 @@ export default function Forecast(props){
     
     async function initializeForecast(){
         let apiKey = "2120c535876391f18db8ca2cc1fdc54e";
-        console.log(" props is ", props);
         let longitude = props.coordinates.lon;
         let latitude = props.coordinates.lat;
         let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
         const response = await axios.get(apiUrl);
         setForecast(response.data.daily);
-        console.log("FOrecast is")
-        console.log(response.data.daily);
     }
     useEffect(() => {
         initializeForecast()
@@ -32,7 +29,7 @@ export default function Forecast(props){
                         forecast.map(function (dailyForecast, index){
                             if(index > 0 && index < 7){
                                 return(
-                                    <ForecastDay data={dailyForecast} />
+                                    <ForecastDay key={index} data={dailyForecast}  />
                                 )
                             }
                         })

@@ -19,7 +19,7 @@ export default function ForecastDay(props){
             <div className="row">
                  <div className="col-12">
                     <div className="icon-day-label">
-                        <WeatherIcon name="owm" iconId={(props.data.weather[0].id).toString()} flip="horizontal" rotate="90" />
+                        <WeatherIcon name="owm"  iconId={(props.data.weather[0].id).toString()} flip="horizontal" rotate="90" />
                     </div>
                 </div>
             </div>
