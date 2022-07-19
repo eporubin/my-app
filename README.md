@@ -1,5 +1,5 @@
 # About Weather Application 2.0 
-> This application was developed using REACT as a part of the SHE CODES REACT module and it`s featuring a Weather application which is responsize to different screen sizes and offers information towards the weather conditions for specifies cities based on **Open Wheather API**.
+> This application was developed using REACT as a part of the SHE CODES REACT module and it`s featuring a Weather application which is responsive to different screen sizes and offers information towards the weather conditions for specifies cities based on **Open Wheather API**.
 > 
 > This application contains: 
 > - Search Engine (to look up for a city of any choice);
