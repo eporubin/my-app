@@ -19,19 +19,20 @@ export default function Forecast(props){
     }
     useEffect(() => {
         initializeForecast()
-      }, [props.coordinates]);
+      }, [props]);
  
     return(
         <div className="Forecast">
             <div className="container">
                 <div className="row">
                     {forecast &&
-                        forecast.map(function (dailyForecast, index){
-                            if(index > 0 && index < 7){
-                                return(
-                                    <ForecastDay key={index} data={dailyForecast}  />
-                                )
-                            }
+                        forecast.filter(function (item, index){ 
+                            return index > 0 && index < 7
+                        })
+                        .map(function (dailyForecast, index){
+                            return(
+                                <ForecastDay key={index} data={dailyForecast}  />
+                            )
                         })
                     }
                     {!forecast && <p>Forecast Loading...</p>}
