@@ -1,11 +1,12 @@
 # About Weather Application 2.0 
-> This application was developed using REACT as a part of the SHE CODES REACT module and it`s featuring a Weather application which is responsize to different screen sizes and offers information towards the weather conditions for specifies cities based on **Open Wheather API**. 
+> This application was developed using REACT as a part of the SHE CODES REACT module and it`s featuring a Weather application which is responsize to different screen sizes and offers information towards the weather conditions for specifies cities based on **Open Wheather API**.
+> 
 > This application contains: 
->> Search Engine (to look up for a city of any choice);
->> Current user geolocation features;
->> Weather information towards the day requested (containing information about the actual temperature,description, humidity and speed wind)
->> Teperature conversion from Celcius to Fahrenheit and viseversa.
->> Weather forecast for the next 6 days (featuring the weather icon, maximum and minimum temperatures for the day) 
+> - Search Engine (to look up for a city of any choice);
+> - Current user geolocation features;
+> - Weather information towards the day requested (containing information about the actual temperature,description, humidity and speed wind)
+> - Teperature conversion from Celcius to Fahrenheit and viseversa.
+> - Weather forecast for the next 6 days (featuring the weather icon, maximum and minimum temperatures for the day) 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
