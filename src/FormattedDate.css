@@ -6,5 +6,6 @@
 @media (max-width: 575.98px) {
     .FormattedDate {
         text-align: center;
+        font-size: 20px;
     }
 }

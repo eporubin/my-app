@@ -22,7 +22,7 @@ body{
 }
 .week-day-label {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #19191d;
   font-size: 25px;
   text-align: center;
@@ -39,8 +39,18 @@ body{
 .week-day-temps .max-temp{
   font-size: 20px;
   font-weight: 600;
-  color: #232327;
+  color: #f76b8a;
 }
 .formatted-date {
  font-size: 25px;
+}
+
+@media (max-width: 575.98px){
+.ForecastDay {
+  border: 1px solid var(--light-color);
+  border-radius: 5px;
+  background-color: rgba(256, 256, 256, 0.5 );
+  padding: 10px;
+  margin-bottom: 10px;
+}
 }

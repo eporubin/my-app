@@ -7,16 +7,16 @@
 }
 .Weather {
   font-family: var(--default-font-family);
-  padding: 16px;
+  padding: 15px;
   border: 1px solid var(--light-color);
   border-radius: 5px;
-  background-color: rgba(256, 256, 256, 0.3 );
+  background-color: rgba(256, 256, 256, 0.5 );
 }
 .Weather input {
   border-radius: 5px 0 0 5px!important;
 }
 .Weather form .btn-search {
-  background-color: var(--background-color);
+  background-color: var(--accent-color);
   color: var(--light-color);
   border: none;
   transition: all 100ms ease;
@@ -25,11 +25,11 @@
 }
 .Weather form .btn-search:hover {
   background-color: var(--light-color);
-  color: var(--background-color);
-  border: 2px solid var(--background-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 .Weather form .btn-current {
-  background-color:var(--accent-color);
+  background-color:var(--background-color);
   color: var(--light-color);
   border: none;
   transition: all 100ms ease;
@@ -37,8 +37,8 @@
 }
 .Weather form .btn-current:hover {
   background-color: var(--light-color);
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  color: var(--background-color);
+  border: 2px solid var(--background-color);
   border-radius: 0 5px 5px 0;
 }
 
@@ -79,6 +79,15 @@
     }
     h1 {
       text-align: center!important;
+    }
+    .Weather .weather-temperature{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .Weather .details{
+      text-align: center;
+      padding-top: 2px;
     }
 
    }
